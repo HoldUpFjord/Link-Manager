@@ -1,2 +1,1 @@
-# Link-Manager
-Goal: Create a link manager that can store tabs on a server to be accessed later. 100Devs
+Goal: A Link Manager where a user can login, and save tabs/pages with a Title, Link, Tag, and potentially more. 
