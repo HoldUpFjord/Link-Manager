@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const LinkSchema = new mongoose.Schema({
-  link: {
+const TabSchema = new mongoose.Schema({
+  tab: {
     type: String,
     required: true,
   },
@@ -17,4 +17,4 @@ const LinkSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('Link', LinkSchema)
+module.exports = mongoose.model('Tab', TabSchema)
