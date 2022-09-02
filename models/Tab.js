@@ -12,7 +12,8 @@ const TabSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true
-  }
+  },
+  tags: [String]
 }, {
   timestamps: true
 })
