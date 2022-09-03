@@ -2,7 +2,7 @@ const Tab = require('../models/Tab')
 
 const splitTags = (str) => {
     let result =  str.split(',')
-    result = result.map(tag => tag.trim())
+    result = result.map(tag => tag.trim()).filter(x => x.length >= 1)
     return result
 
 }
