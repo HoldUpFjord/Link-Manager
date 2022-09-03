@@ -1,5 +1,11 @@
 const Tab = require('../models/Tab')
 
+const splitTags = (str) => {
+    let result =  str.split(',')
+    result = result.map(tag => tag.trim()).filter(tag => tag.length >= 1)
+    return result
+}
+
 module.exports = {
     getTabs: async (req,res)=>{
         console.log(req.user)
@@ -14,7 +20,9 @@ module.exports = {
     },
     createTab: async (req, res)=>{
         try{
-            await Tab.create({tab: req.body.tabItem, completed: false, userId: req.user.id})
+            let tabTags = splitTags(req.body.tabTags)
+            console.log(tabTags)
+            await Tab.create({tab: req.body.tabItem, completed: false, userId: req.user.id, tags: tabTags})
             console.log('Tab has been added!')
             res.redirect('/tabs')
         }catch(err){
