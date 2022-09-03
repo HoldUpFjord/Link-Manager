@@ -1,11 +1,8 @@
 const Link = require("../models/Link");
 const axios = require("axios").default;
+const helpers = require("../middleware/helpers")
 
-const splitTags = (str) => {
-	let result = str.split(",");
-	result = result.map((tag) => tag.trim()).filter((tag) => tag.length >= 1);
-	return result;
-};
+
 
 module.exports = {
 	getLinks: async (req, res) => {
@@ -31,33 +28,18 @@ module.exports = {
 	},
 	createLink: async (req, res) => {
 		try {
-			let linkTags = splitTags(req.body.linkTags);
+			let linkTags = helpers.splitTags(req.body.linkTags);
 			let linkURL = req.body.linkItem;
 			const axiosConfig = {
 				responseType: "json",
 			};
 			console.log(linkTags, linkURL);
 
-			const parseTitle = (body) => {
-				// get the start index and the end index of the head
-				const startTitle = body.data.indexOf("<title>") + 7;
-				const endTitle = body.data.indexOf("</title>");
-
-				//get the head as a string
-				const parseTitle = body.data.slice(startTitle, endTitle);
-
-				console.log(`${parseTitle} ${typeof parseTitle}`);
-
-				// Helper function to extract the title from the header of the page returned from the URL
-
-				if (!parseTitle || typeof parseTitle !== "string")
-					throw new Error("Unable to parse the title tag");
-				return parseTitle;
-			};
+			
 			await axios
 				.get(linkURL, axiosConfig)
 				.then((body) => {
-					return parseTitle(body);
+					return helpers.parseTitle(body);
 				}) // extract <title> from head
 				.then((response) => {
 					Link.create({
