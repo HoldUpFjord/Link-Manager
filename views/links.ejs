@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Links</h1>
+    <h2>Recent Links</h2>
+    <ul>
+        <% last5.forEach( el => { %>
+            <li class='linkItem' data-id='<%=el._id%>'>
+              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+                <span class='del'> Delete </span>
+        </li>
+    <% }) %>    
+
+    </ul>
+
+    <h2>Links</h2>
     <ul>
     <% links.forEach( el => { %>
             <li class='linkItem' data-id='<%=el._id%>'>
@@ -19,6 +30,7 @@
     </ul>
 
     <h2><%= user.userName %> has <%= left %> links saved.</h2>
+
 
     <form action="/links/createLink" method='POST'>
         <input type="text" placeholder="Enter Link" name='linkItem'>

@@ -11,13 +11,16 @@ module.exports = {
 	getLinks: async (req, res) => {
 		console.log(req.user);
 		try {
-			// const recentLinks = await Link.find({})
 			const linkItems = await Link.find({ userId: req.user.id }).sort({});
 			const itemsLeft = await Link.countDocuments({
 				userId: req.user.id,
 				completed: false,
 			});
+			const last5 = linkItems.sort((a,b) => b.createdAt - a.createdAt)
+														 .filter((x,i) => i <= 4)										 
+			console.log({last5})
 			res.render("links.ejs", {
+				last5: last5,
 				links: linkItems,
 				left: itemsLeft,
 				user: req.user,
