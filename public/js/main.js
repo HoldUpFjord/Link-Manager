@@ -1,69 +1,69 @@
-const deleteBtn = document.querySelectorAll('.del')
-const tabItem = document.querySelectorAll('span.not')
-const tabComplete = document.querySelectorAll('span.completed')
+const deleteBtn = document.querySelectorAll(".del");
+const linkItem = document.querySelectorAll("span.not");
+const linkComplete = document.querySelectorAll("span.completed");
 
-Array.from(deleteBtn).forEach((el)=>{
-    el.addEventListener('click', deleteTab)
-})
+Array.from(deleteBtn).forEach((el) => {
+	el.addEventListener("click", deleteLink);
+});
 
-Array.from(tabItem).forEach((el)=>{
-    el.addEventListener('click', markComplete)
-})
+Array.from(linkItem).forEach((el) => {
+	el.addEventListener("click", markComplete);
+});
 
-Array.from(tabComplete).forEach((el)=>{
-    el.addEventListener('click', markIncomplete)
-})
+Array.from(linkComplete).forEach((el) => {
+	el.addEventListener("click", markIncomplete);
+});
 
-async function deleteTab(){
-    const tabId = this.parentNode.dataset.id
-    try{
-        const response = await fetch('tabs/deleteTab', {
-            method: 'delete',
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({
-                'tabIdFromJSFile': tabId
-            })
-        })
-        const data = await response.json()
-        console.log(data)
-        location.reload()
-    }catch(err){
-        console.log(err)
-    }
+async function deleteLink() {
+	const linkId = this.parentNode.dataset.id;
+	try {
+		const response = await fetch("links/deleteLink", {
+			method: "delete",
+			headers: { "Content-type": "application/json" },
+			body: JSON.stringify({
+				"linkIdFromJSFile": linkId,
+			}),
+		});
+		const data = await response.json();
+		console.log(data);
+		location.reload();
+	} catch (err) {
+		console.log(err);
+	}
 }
 
-async function markComplete(){
-    const tabId = this.parentNode.dataset.id
-    try{
-        const response = await fetch('tabs/markComplete', {
-            method: 'put',
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({
-                'tabIdFromJSFile': tabId
-            })
-        })
-        const data = await response.json()
-        console.log(data)
-        location.reload()
-    }catch(err){
-        console.log(err)
-    }
+async function markComplete() {
+	const linkId = this.parentNode.dataset.id;
+	try {
+		const response = await fetch("links/markComplete", {
+			method: "put",
+			headers: { "Content-type": "application/json" },
+			body: JSON.stringify({
+				"linkIdFromJSFile": linkId,
+			}),
+		});
+		const data = await response.json();
+		console.log(data);
+		location.reload();
+	} catch (err) {
+		console.log(err);
+	}
 }
 
-async function markIncomplete(){
-    const tabId = this.parentNode.dataset.id
-    try{
-        const response = await fetch('tabs/markIncomplete', {
-            method: 'put',
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({
-                'tabIdFromJSFile': tabId
-            })
-        })
-        const data = await response.json()
-        console.log(data)
-        location.reload()
-    }catch(err){
-        console.log(err)
-    }
+async function markIncomplete() {
+	const linkId = this.parentNode.dataset.id;
+	try {
+		const response = await fetch("links/markIncomplete", {
+			method: "put",
+			headers: { "Content-type": "application/json" },
+			body: JSON.stringify({
+				"linkIdFromJSFile": linkId,
+			}),
+		});
+		const data = await response.json();
+		console.log(data);
+		location.reload();
+	} catch (err) {
+		console.log(err);
+	}
 }

@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Tabs</h1>
+    <h1>Links</h1>
     <ul>
-    <% tabs.forEach( el => { %>
-            <li class='tabItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.tab %></span>
-                <span><%= el.tags %></span>
+    <% links.forEach( el => { %>
+            <li class='linkItem' data-id='<%=el._id%>'>
+              <a href='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
@@ -21,9 +20,9 @@
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
-    <form action="/tabs/createTab" method='POST'>
-        <input type="text" placeholder="Enter Tab Item" name='tabItem'>
-        <input type="text" placeholder="Enter Tab tags" name='tabTags'>
+    <form action="/links/createLink" method='POST'>
+        <input type="text" placeholder="Enter Link" name='linkItem'>
+        <input type="text" placeholder="Enter tags" name='linkTags'>
         <input type="submit">
     </form>
 
