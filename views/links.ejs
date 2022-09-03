@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Recent Links</h2>
+    <ul>
+        <% last5.forEach( el => { %>
+            <li class='linkItem' data-id='<%=el._id%>'>
+              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+                <span class='del'> Delete </span>
+        </li>
+    <% }) %>    
+
+    </ul>
+
+    <h2>Links</h2>
+    <ul>
+    <% links.forEach( el => { %>
+            <li class='linkItem' data-id='<%=el._id%>'>
+              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> links saved.</h2>
+
+
+    <form action="/links/createLink" method='POST'>
+        <input type="text" placeholder="Enter Link" name='linkItem'>
+        <input type="text" placeholder="Enter tags" name='linkTags'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
