@@ -12,13 +12,13 @@
     <ul>
     <% links.forEach( el => { %>
             <li class='linkItem' data-id='<%=el._id%>'>
-              <a href='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+    <h2><%= user.userName %> has <%= left %> links saved.</h2>
 
     <form action="/links/createLink" method='POST'>
         <input type="text" placeholder="Enter Link" name='linkItem'>
