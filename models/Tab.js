@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const TodoSchema = new mongoose.Schema({
-  todo: {
+const TabSchema = new mongoose.Schema({
+  tab: {
     type: String,
     required: true,
   },
@@ -13,6 +13,8 @@ const TodoSchema = new mongoose.Schema({
     type: String,
     required: true
   }
+}, {
+  timestamps: true
 })
 
-module.exports = mongoose.model('Todo', TodoSchema)
+module.exports = mongoose.model('Tab', TabSchema)
