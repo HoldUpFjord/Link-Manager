@@ -1,8 +1,6 @@
 const Link = require("../models/Link");
 const axios = require("axios").default;
-const helpers = require("../middleware/helpers")
-
-
+const helpers = require("../middleware/helpers");
 
 module.exports = {
 	getLinks: async (req, res) => {
@@ -13,9 +11,10 @@ module.exports = {
 				userId: req.user.id,
 				completed: false,
 			});
-			const last5 = linkItems.sort((a,b) => b.createdAt - a.createdAt)
-														 .filter((x,i) => i <= 4)										 
-			console.log({last5})
+			const last5 = linkItems
+				.sort((a, b) => b.createdAt - a.createdAt)
+				.filter((x, i) => i <= 4);
+			console.log({ last5 });
 			res.render("links.ejs", {
 				last5: last5,
 				links: linkItems,
@@ -35,11 +34,11 @@ module.exports = {
 			};
 			console.log(linkTags, linkURL);
 
-			
 			await axios
 				.get(linkURL, axiosConfig)
 				.then((body) => {
-					return helpers.parseTitle(body);
+					// return helpers.parseTitle(body);
+					return helpers.scrapeTitle(body);
 				}) // extract <title> from head
 				.then((response) => {
 					Link.create({
