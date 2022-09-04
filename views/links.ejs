@@ -23,8 +23,8 @@
     <ul>
     <% links.forEach( el => { %>
             <li class='linkItem' data-id='<%=el._id%>'>
-              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
-                <span class='del'> Delete </span>
+              <a target="_blank" href="<%= el.link %>" class='links'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+              <span class='del'> Delete </span>
             </li>
     <% }) %>    
     </ul>
