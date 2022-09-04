@@ -5,7 +5,7 @@ h1{
     text-decoration: line-through;
     color: gray;
 }
-.not{
+.links{
     text-decoration: underline;
 }
 #topLogo{
@@ -78,4 +78,19 @@ text-align: center;
 
 color: #000000;
 
+}
+
+
+.tag {
+    color: rgb(41, 36, 36);
+    list-style-type: none; 
+    display: inline-block;
+    background-color: #cde1e9;
+    margin-right: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+ul {
+    padding-left: 0;
 }
