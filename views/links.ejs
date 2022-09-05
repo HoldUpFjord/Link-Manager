@@ -13,7 +13,8 @@
         <% last5.forEach( el => { %>
             <li class='linkItem' data-id='<%=el._id%>'>
               <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
-                <span class='del'> Delete </span>
+              <a href = "<%= el.link%>"><button>Link</button></a>
+                <button class='del'> Delete </button>
         </li>
     <% }) %>    
 
@@ -29,7 +30,7 @@
                     <li class="tag"> <%= tag %> </li>
                 <% }) %>
               </ul>
-
+              <a href = "<%= el.link%>"><button>Link</button></a>
               <span class='del'> Delete </span>
             </li>
     <% }) %>    
