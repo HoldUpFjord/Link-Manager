@@ -5,40 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/linkLight.css">
 </head>
 <body>
-    <h2>Recent Links</h2>
-    <ul>
-        <% last5.forEach( el => { %>
-            <li class='linkItem' data-id='<%=el._id%>'>
-              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
-                <span class='del'> Delete </span>
-        </li>
-    <% }) %>    
+    <header>
+        <div class="wrapper">
+          <div class="brand">
+          <a href="/links"><img src="assets/user1.png" alt="logo" id="headerIcon"></a>
+          <a href="/links">Welcome,<%= user.userName %></a>
+          </div>
+          <nav>
+            <ul id="navList">
+            <li class="navItem"><a href="#collection">Collections</a></li>
+            <li class="navItem"><a href="#">Settings</a></li>
+            <li class="navItem"><a href="/logout">Log Out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main>
+        <h1>Your Dashboard</h1>
+            <h3>Save Tab Here</h3>
+            <form action="/links/createLink" method='POST'>
+                <span>Name:</span>
+                <input type="text" id="nameVar" placeholder="Enter Name" name='linkName'>
+                <span>Link:</span>
+                <input type="text" id="linkVar" placeholder="Enter Link" name='linkItem'>
+                <span>Tag:</span>
+                <input type="text" id="tagVar" placeholder="Enter Tag" name='linkTags'>
+                <input type="submit" id="button">
+            </form>
+        <hr>
+            <h3>Recent Tabs</h3>
+            <h4>Added</h4>
+                <ul>
+                    <% last5.forEach( el => { %>
+                        <li class='linkItem' data-id='<%=el._id%>'>
+                        <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+                            <span class='del'> Delete </span>
+                    </li>
+                <% }) %>    
+                </ul>
+            <h4>Removed</h4>
+                    <ul>
+                    <% links.forEach( el => { %>
+                            <li class='linkItem' data-id='<%=el._id%>'>
+                            <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
+                                <span class='del'> Delete </span>
+                            </li>
+                    <% }) %>    
+                    </ul>
 
-    </ul>
+            <h5><%= user.userName %> has <%= left %> links saved.</h5>
+    </main>
+    <section id="collection">
+        <h2>Your Collections</h2>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+            <div>
+                <button></button>
+            </div>
+    </section>
+        
+    <footer>
 
-    <h2>Links</h2>
-    <ul>
-    <% links.forEach( el => { %>
-            <li class='linkItem' data-id='<%=el._id%>'>
-              <a target="_blank" href="<%= el.link %>" class='<%= el.completed === true ? 'completed' : 'not'%>'>%><span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span></a>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
-
-    <h2><%= user.userName %> has <%= left %> links saved.</h2>
-
-
-    <form action="/links/createLink" method='POST'>
-        <input type="text" placeholder="Enter Link" name='linkItem'>
-        <input type="text" placeholder="Enter tags" name='linkTags'>
-        <input type="submit">
-    </form>
-
-    <a href="/logout">Logout</a>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
