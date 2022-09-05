@@ -5,53 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header id="header">
-        <nav>
-            <ul>
-                <img src="safe.png" alt="logo" id="topLogo">
-                <li><a href="#" id="tabSafe">TabSafe</a></li>
-                <li><a href="signup" id="label1" class="icon brands fa-facebook-f"><span class="label">Sign Up</span></a></li>
-                <li><a href="login" id="label2" class="icon brands fa-snapchat-ghost"><span class="label">Login</span></a></li>
+    <header>
+        <div class="wrapper">
+          <div class="brand">
+          <a href='/'><img src="assets/internet.png" alt="logo" id="headerIcon"></a>
+          <a href='/'>TabSafe</a>
+          </div>
+          <nav>
+            <ul id="navList">
+              <li class="navItem"><a href="signup">Sign Up</a></li>
+              <li class="navItem"><a href="login">Login</a></li>
             </ul>
-        </nav>
-    </header>
+          </nav>
+        </div>
+      </header>
+    
+    <main>
+        <h1>Regain your sanity & your computer's memory today</h1>
+        <p>Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="primaryButton"><a href="signup"> Sign Up</a></button>
+        <button class="altButton"><a href="#learnMore"> Learn More</a></button>
+    </main>
 
-    <br>
-
-    <section id="section1">
-    <h1>Regain your sanity & your computer’s memory today</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab beatae, aut fugiat optio aspernatur harum, deleniti soluta autem tenetur ad voluptas consectetur aliquid labore expedita error eveniet adipisci eum?</p>
-    <button><a href="signup"> Sign Up</a></button>
-    <button><a href="#learnMore"> Learn More</a></button>
+    <section class="content" id="learnMore">
+        <div class="txt">
+            <h2>Customize your dashboard to meet your needs.</h2> 
+            <p> Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="img">
+            <img src="assets/Dashboard.png" class="img-responsive" alt="screenshot"/>
+        </div>
     </section>
 
-    <br>
+    <section class="content" id="bgVisual">
+        <div class="img">
+            <img src="assets/Collection.png" class="img-responsive" alt="screenshot"/>
+        </div>
+        <div class="txt">
+            <h2>View all of your links in one place.</h2>
+            <p>Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </section>
 
-    <section>
-        <div id="learnMore"><h2>Customize your dashboard to meet your needs.</h2> <p> ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptas nisi ducimus consequatur quisquam? Sapiente, veritatis ducimus! Delectus rem ipsam vitae excepturi quos. Officiis, debitis nulla harum nostrum distinctio maxime.</p></div>
-        <div id="dashboardImage"><img src="Dashboard.png" /></div>
+    <section id="cta">
+        <div>
+            <h3>Why Wait? Join Today!</h3>
+            <button class="primaryButton"><a href="signup">Sign Up</a></button>
+        </div>
     </section>
-    <section>
-        <div> <h2>Keep all your tabs in collections.</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque quae tempore quia. Quo, deserunt? Fugit voluptate ullam dolores, eveniet voluptas, est at, natus sapiente placeat officia assumenda dignissimos! Quod.</p></div>
-        <div id="collectionImage"><img src="Collection.png" /></div>
-    </section>
-    <div>
-    <h3>Why Wait? Join Today!</h3>
-    <button><a href="signup">Sign Up</a></button>
-    </div>
+
     <footer>
-        <img src="safe.png" alt="Logo">
-        <span>Copyright TabSafe 2022</span> 
+        <div>
+        <img src="assets/internet.png" alt="Logo" class="footerIcon">
+        <span>Copyright TabSafe 2022</span>
+        </div> 
+        <div>
         <ul>
-            <li><img src="facebook.png" alt="facebook"></li>
-            <li><img src="instagram.png" alt="instagram"></li>
-            <li><img src="twitter.png" alt="twitter"></li>
-            <li><img src="youtube.png" alt="youtube"></li>
-            <li><img src="email.png" alt="email"></li>
+            <li><img src="assets/facebook.png" alt="facebook" class="footerIcon"></li>
+            <li><img src="assets/instagram.png" alt="instagram" class="footerIcon"></li>
+            <li><img src="assets/twitter.png" alt="twitter" class="footerIcon"></li>
+            <li><img src="assets/youtube.png" alt="youtube" class="footerIcon"></li>
+            <li><img src="assets/email.png" alt="email" class="footerIcon"></li>
         </ul>
+        </div>
     </footer>
+
 </body>
 </html>

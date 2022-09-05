@@ -1,0 +1,132 @@
+html{
+    font-size: 10px;
+}
+body{
+    font-family: "Arial", sans-serif;
+    font-size: 1.5rem;}
+
+/* Navbar styling */
+
+header {
+    position: relative;
+    height: 7vh;}
+  
+.wrapper{
+background-color:#19C0EF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 2rem;}
+
+.wrapper a{
+    color:white;}
+
+#navList{
+    display: flex; } 
+  
+.navItem a{
+    display: block;
+    padding: 1.5rem 1rem;}
+  
+.brand{
+    display: flex;
+    align-items: center}
+
+a, li{
+  text-decoration: none;}
+
+#headerIcon{
+    width: 50px;
+    height: 50px;}
+
+/* Dashboard styling */
+
+main{
+    height: 75vh;
+    padding: 5rem 10rem 2rem 10rem;}
+
+main h1{
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 2rem;}
+
+main h3{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;}
+
+main form{
+    padding-left: 4.rem;
+}
+main input{
+    border-radius: 5px;
+    margin: 1rem 1rem 1rem 0rem;
+    font-size: 2rem;}
+
+form span{
+    font-size: 2rem;
+    font-weight: bold;}
+
+#nameVar{
+    width: 40rem;}
+
+#linkVar{
+    width: 50rem;}
+
+#tagVar{
+    width: 25rem;}
+
+#button{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 10px;
+    font-size: 2rem; 
+    font-weight: bold;
+    padding: 0;
+    margin-right: 0;
+    border: 0;
+    background: #19C0EF;
+    color: white;}
+
+hr{
+   margin: 1.5rem 0rem ; }
+
+main h4{
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;}
+
+main h5{
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: end;
+    padding-right: 2.5rem;
+    margin-bottom: 1.5rem;}
+
+
+/* Collection styling */
+
+section{
+    background: linear-gradient(#19C0EF,#165771);
+    height: 103vh;
+    padding: 5rem 10rem 2rem 10rem;
+}
+section h2{
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;}
+
+section div{
+    border: 1px solid red;
+}
+
+/* Footer styling */
+
+footer{
+    height: 15vh;}
