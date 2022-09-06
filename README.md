@@ -2,11 +2,11 @@
 ## Link Manager / Tab Safe
 A Link Manager where a user can login, and save tabs/pages with a Title, Link, Tagging system, and potentially more. 
 
-# Link to project: https://tab-safe.thewoodenman.repl.co/
+Link to project: https://tab-safe.thewoodenman.repl.co/
 
 ![image](https://user-images.githubusercontent.com/85075266/188533012-a5e0bce5-9fc3-4b6b-a83e-2ac4cc2c73bf.png)
 
-# How It's Made:
+# Tech Stack and Use Case:
 Tech used: HTML, CSS, JavaScript, node.js, express, mongodb, mongoose, axios and cheerio
 
 We built the app as collaboration, in an effort to write solve an important real world problem.
@@ -31,6 +31,8 @@ We had to adapt our web parser to cater for these edge-casese so we decided to i
 this npm module boasts jquery-like commands and gave us more control over the filtering by rendering a virtual dom which we could then access and parse to the server after the frameworks had finished their job.
 
 Heavy use of javascript string/array methods meant that content manipulation and prep was covered pretty well. we were able to sculpt the content to fit our use cases.
+
+# Architecture and Teamwork
 
 The code is structured appropriately for an MCV framework with a clear separation of concerns and we stuck to that architecture extremely closely, reaping the benefits of simplicity and readability which are needed for this type of asyncronous project and team work. (We were working cross-time zones!)
 
