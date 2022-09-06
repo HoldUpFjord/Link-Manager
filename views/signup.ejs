@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+          <div class="brand">
+          <a href='/'><img src="assets/internet.png" alt="logo" id="headerIcon"></a>
+          <a href='/'>TabSafe</a>
+          </div>
+          <nav>
+            <ul id="navList">
+              <li class="navItem"><a href="signup">Sign Up</a></li>
+              <li class="navItem"><a href="login">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main>
+    <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %>    
+    <% } %>
+    <div>
+        <h2>Sign In</h2> 
+    <form action="/signup" method="POST">
+        <span>Username:</span>
+        <input type="text" name="userName" placeholder="Username">
+        <span>Email:</span>
+        <input type="email" name="email" placeholder="Email">
+        <span>Password:</span>
+        <input type="password" name="password" placeholder="Password">
+        <span>Confirm Password:</span>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password">
+        <input id="button" type="submit">
+    </form>
+    </div>
+    </main>
+</body>
+</html>
