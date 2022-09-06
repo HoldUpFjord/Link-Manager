@@ -6,7 +6,7 @@ Write a short sentence or two about this project and what it does. Be sure to in
 
 Link to project: <link to repl when done>
 
-<screen cap of front page>
+![image](https://user-images.githubusercontent.com/85075266/188533012-a5e0bce5-9fc3-4b6b-a83e-2ac4cc2c73bf.png)
 
 How It's Made:
 Tech used: HTML, CSS, JavaScript, node.js, express, mongodb, mongoose, axios and cheerio
@@ -15,6 +15,8 @@ We build the as a collaboration in an effort to write an app that solved a real 
 People with ADHD, memory issues or partially sighted can sometimes have issues keeping track of the links and tabs they have open in their browser.  After talking to an ADHD community about the issue it seemed to be a common problem that on closing the browser with many tabs (chrome) they would be lost and sometimes difficult to get back without digging through the history line by line.
 
 This app sets out to solve that problem. 
+
+![image](https://user-images.githubusercontent.com/85075266/188532976-c18062ba-1497-42c9-8c72-fa3dbbae0955.png)
 
 We build the app with mongodb because it allows data to be stored as objects and held in the cloud for quick, easy access and because we would eventually host this on replit or a similar centrally hosted solution which would mean it's not necessary to migrate data or set up dedicated hosting.
 
