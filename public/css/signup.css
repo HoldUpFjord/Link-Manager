@@ -1,0 +1,97 @@
+html{
+    font-size: 10px;}
+
+body{
+    font-family: "Arial", sans-serif;
+    font-size: 1.5rem;}
+
+body h2, span{
+    color: black;
+    font-weight: bold;}
+
+h2{
+    font-size: 4.5rem;
+    margin-bottom: 2rem;}
+
+span{
+    font-size: 2.2rem;}
+
+/* Navbar styling */
+
+header {
+    position: relative;
+    height: 7vh;}
+  
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 2rem;}
+
+.wrapper a{
+    color:black;}
+
+#navList{
+    display: flex; } 
+  
+.navItem a{
+    display: block;
+    padding: 1.5rem 1rem;}
+  
+.brand{
+    display: flex;
+    align-items: center}
+
+a, li{
+  text-decoration: none;}
+
+#headerIcon{
+    width: 50px;
+    height: 50px;}
+
+/* Hero styling & Form styling */
+
+main{
+    background: linear-gradient(#FCBE29,#FE9022);
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div{
+    width: 40%;
+    height: 70%;
+    padding-left: 8rem;
+}
+
+main form{
+    padding-left: 10rem;
+}
+
+main input{
+    width:36rem;
+    height: 4rem;
+    border-radius: 5px;
+    margin: 1.2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#button{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 10px;
+    font-size: 2rem; 
+    font-weight: bold;
+    padding: 0;
+    margin: 2rem;
+    background: #16577100;
+    border: 3px solid #165771;
+    color: black;
+}

@@ -1,0 +1,172 @@
+html{
+    font-size: 10px;
+}
+body{
+    font-family: "Arial", sans-serif;
+    font-size: 1.5rem;}
+
+/* Navbar styling */
+
+header {
+    position: relative;
+    height: 7vh;}
+  
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 2rem;}
+
+.wrapper a{
+    color:black;}
+
+#navList{
+    display: flex; } 
+  
+.navItem a{
+    display: block;
+    padding: 1.5rem 1rem;}
+  
+.brand{
+    display: flex;
+    align-items: center}
+
+a, li{
+  text-decoration: none;}
+
+#headerIcon{
+    width: 50px;
+    height: 50px;}
+
+/* Hero styling */
+
+main{
+    background: linear-gradient(#19C0EF,#165771);
+    height: 48vh;
+    padding-top: 11rem;
+    padding-left: 14rem;}
+
+main h1{
+    color: white;
+    font-size: 6rem;
+    font-weight: bold;
+    max-width: 50%;
+    margin-bottom: 2rem;}
+
+main p{
+    max-width: 35%;
+    font-size: 2rem;
+    font-weight: bold;}
+
+button{
+    width: 14rem;
+    height: 6rem;
+    border-radius: 50px;
+    font-size: 2rem; 
+    font-weight: bold;
+    padding: 0;
+    margin: 2rem}
+
+.primaryButton{
+    background: #FE9022;
+    border: none;}
+
+.primaryButton a{
+    color: black;}
+
+.altButton{
+    background: #fe902200;
+    border: 3px solid #FE9022;}
+
+.altButton a{
+    color:white;}
+
+/* section stylings */
+
+.content{
+    display: flex;
+    height: 55vh;}
+
+#bgVisual{
+    background: linear-gradient(#FCBE29,#FE9022);}
+
+.content h2{
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #19C0EF;
+    max-width: 80%;
+    margin-bottom: 2rem;}
+
+.content p{
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 50%;}
+
+#bgVisual h2{
+    color: black;}
+
+#bgVisual h2, #bgVisual p{
+    text-align: end;}
+
+.content div {
+    width: 50%;}
+
+.content div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 3rem;}
+
+.txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
+#learnMore .txt{
+    padding-left: 3.5rem;}
+
+#bgVisual .txt{
+    align-items: flex-end;
+    padding-right: 3.5rem;}
+
+
+#cta{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+#cta div button {
+    margin-left: 10rem;}
+
+h3{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #19C0EF;}
+
+/* footer stylings */
+footer{
+    background-color:#000000;
+    height: 15vh;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+footer ul{
+    display: flex;}
+
+footer ul li{
+    display: block;
+    padding: 1.5rem 1rem;}
+
+.footerIcon{
+    width: 25px;
+    height: 25px;}
+
+span{
+    color: #FE9022;}

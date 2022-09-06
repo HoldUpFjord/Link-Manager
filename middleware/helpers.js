@@ -16,7 +16,7 @@ const scrapeTitle = (body) => {
 	if (
 		// If it's a short title - just grab it - length can be tweaked.
 		$("html").find("title").text() &&
-		$("html").find("title").text().length < 20
+		$("html").find("title").text().length < 50
 	) {
 		title = $("html").find("title").text();
 	} else if ($("[title]").attr().title) {
@@ -24,7 +24,7 @@ const scrapeTitle = (body) => {
 		title = $("[title]").attr().title;
 	} else {
 		// just deal with the longer link but slice it down to sice - length can be tweaked.
-		title = $("html").find("title").text().slice(0, 20);
+		title = $("html").find("title").text().slice(0, 50);
 	}
 	console.log(title);
 	return title;
