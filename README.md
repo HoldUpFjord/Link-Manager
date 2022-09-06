@@ -1,13 +1,12 @@
-Goal: 
 
-Link Manager / Carkmark 
+## Link Manager / Tab Safe
 A Link Manager where a user can login, and save tabs/pages with a Title, Link, Tagging system, and potentially more. 
 
-Link to project: https://tab-safe.thewoodenman.repl.co/
+# Link to project: https://tab-safe.thewoodenman.repl.co/
 
 ![image](https://user-images.githubusercontent.com/85075266/188533012-a5e0bce5-9fc3-4b6b-a83e-2ac4cc2c73bf.png)
 
-How It's Made:
+# How It's Made:
 Tech used: HTML, CSS, JavaScript, node.js, express, mongodb, mongoose, axios and cheerio
 
 We built the app as collaboration, in an effort to write solve an important real world problem.
@@ -19,6 +18,8 @@ After talking to an ADHD community about the issue it seemed to be a common prob
 This app sets out to solve that problem. 
 
 ![image](https://user-images.githubusercontent.com/85075266/188532976-c18062ba-1497-42c9-8c72-fa3dbbae0955.png)
+
+# Dev Review
 
 We built the app with mongodb because it allows data to be stored as objects and held in the cloud for quick, easy access and because we would eventually host this on replit or a similar centrally hosted solution. 
 
@@ -37,11 +38,11 @@ We pair-programmed on a number of occasions with this project which let us gain 
 
 The project gave a fantastic opportunity to practice our collaboration/communication skills as well as familarising us with github (issues, milestones, push/pull, branch reviews and pull requests) and also general git commands.
 
-Optimizations
+# Optimizations
 
 There are a number of suggested features that we discussed as being good possible future additions, these are detailed in the issues tab.
 
-Lessons Learned
+# Lessons Learned
 
 This was the first time we dived into http parsing and webscraping generally and it opened our eyes to how diverse the options are here. 
 Once set up - there were a variety of ways that we could approach the data and it's good to know what is possible as well as how this could be used in future.
