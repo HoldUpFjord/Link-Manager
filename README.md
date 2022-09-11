@@ -21,6 +21,9 @@ This app sets out to solve that problem.
 
 # Dev Review
 
+The initial outline for the app was designed in figma:
+https://www.figma.com/file/7wn5cs3qVEgykZBOIBhaf1/Untitled?node-id=0%3A1
+
 We built the app with mongodb because it allows data to be stored as objects and held in the cloud for quick, easy access and because we would eventually host this on replit or a similar centrally hosted solution. 
 
 This means it wasn't necessary to migrate data or set up dedicated hosting we could simply link to the db. 
